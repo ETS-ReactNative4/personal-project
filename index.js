@@ -12,8 +12,8 @@ let app = express()
 app.use(bodyParser.json());
 app.use(cors());
 massive(process.env.CONNECTION_STRING).then( db =>{
-app.set('db', db)
 console.log('connected')  
+app.set('db', db)
 }  );
 
 

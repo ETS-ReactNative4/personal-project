@@ -32,17 +32,16 @@ clientID: process.env.AUTH_CLIENTID,
 clientSecret: process.env.AUTH_CLIENT_SECRET,
 callbackURL: 'http://localhost:3013/auth/callback'
 }, function(accessToken, refreshToken, extraParams, profile, done){
-// const db = app.get('db')
+const db = app.get('db')
 
-// db.find_user([ profile.identities[0].user_id ]).then( user => {
-//     if(user[0]){
-//         return done(null, user[0].id);
-//     } else {
-//         res.redirect(404, 'http://localhost:3000/' )
-//     }
-// })
-
-done(null, profile);
+db.find_user([ profile._json.email ]).then( user => {
+    console.log(user)
+    if(user[0]){
+        return done(null, user[0]);
+    } else {
+        return done(null, false);
+    }
+})
 }));
 
 app.get('/auth', passport.authenticate('auth0'));
@@ -52,15 +51,16 @@ successRedirect: 'http://localhost:3000/',
 failureRedirect: '/auth'
 }))
 
-app.get('auth/me', (req, res) => {
+app.get('/auth/me', (req, res) => {
 if(!req.user) {
-return res.status(401).send('No user found')
+return res.status(401).send(false)
 }
 return res.status(200).send(req.user)
 })
 
 passport.serializeUser( (user, done) => {
 //user = profile from above
+//
 done(null, user);
 })
 passport.deserializeUser( (user, done) => {

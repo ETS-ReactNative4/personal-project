@@ -7,6 +7,9 @@ class App extends Component {
     return (
       <div className="App">
         <NavBar />
+        <a href='http://localhost:3013/auth'>
+          <button>Login</button>
+        </a>
       </div>
     );
   }

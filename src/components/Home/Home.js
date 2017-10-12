@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './Home.css';
+import NavBar from '../NavBar/NavBar'
 
 export default class Home extends Component {
 
@@ -7,6 +8,7 @@ export default class Home extends Component {
         return (
             <div className='header'>
                 <div className='hero-img'>
+                <NavBar />
                     <div className='hero'>
                         <h1>TLC</h1>
                         <h3>The Terry Larsen family of companies are constantly working hard to try and improve<br />

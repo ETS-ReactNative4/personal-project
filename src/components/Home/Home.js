@@ -9,7 +9,7 @@ export default class Home extends Component {
             <div className='header'>
                 <div className='hero-img'>
                 <NavBar />
-                    <div className='hero'>
+                    <div className='heroHome'>
                         <h1>TLC</h1>
                         <h3>The Terry Larsen family of companies are constantly working hard to try and improve<br />
                             the work force and provide the best quality work. Our work force undergoes weekly<br />

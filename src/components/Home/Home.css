@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css?family=Catamaran:200');
 
 
-.hero{
+.heroHome{
     color: white;
     /* font-family: 'PT Sans Narrow', sans-serif; */
     font-family: 'Catamaran', sans-serif;
@@ -29,6 +29,7 @@
 
 .projects{
     display: flex;
+    background: #6F6F6F;
 }
 
 .img1{

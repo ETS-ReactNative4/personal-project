@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css?family=Catamaran:200');
+
+/* font-family: 'Catamaran', sans-serif; */
+
+.heroProjects{
+    background: url('hero2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 550px;
+}
+
+.headerProjects{
+    color:black;
+    /* font-family: 'PT Sans Narrow', sans-serif; */
+    font-family: 'Catamaran', sans-serif;
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+}

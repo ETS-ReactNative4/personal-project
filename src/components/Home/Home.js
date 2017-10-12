@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './Home.css';
-import NavBar from '../NavBar/NavBar'
+import NavBar from '../NavBar/NavBar';
 
 export default class Home extends Component {
 
@@ -29,7 +29,7 @@ export default class Home extends Component {
                 <div className='projects'>
                     <div className='img1'></div>
                     <div className='img2'></div>
-                    <div className='img2'></div>
+                    <div className='img3'></div>
                     
                 </div>
                 <a href='http://localhost:3013/auth'>

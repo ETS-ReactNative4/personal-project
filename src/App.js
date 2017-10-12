@@ -13,9 +13,6 @@ class App extends Component {
     return (
       <div className="App">
         <NavBar />
-        <a href='http://localhost:3013/auth'>
-          <button>Login</button>
-        </a>
         <Switch>
           <Route exact path='/' component={Home} />
           <Route exact path='/projects' component={Projects} />

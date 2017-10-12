@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans+Narrow');
+
+
+.hero{
+    color: white;
+    font-family: 'PT Sans Narrow', sans-serif;
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+}
+
+
+.hero-img{
+    background: url('hero1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 550px;
+}
+
+.sub-header{
+    background: #D4D1D1;
+}

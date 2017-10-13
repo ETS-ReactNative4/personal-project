@@ -68,6 +68,10 @@ done(null, user);
 })
 
 
+require("./router")(app)
+
+
+
 
 
 const PORT = 3013

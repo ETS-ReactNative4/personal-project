@@ -3,6 +3,10 @@
 # dependencies
 /node_modules
 .env
+mailer.js
+router.js
+contact.js
+router.js
 
 # testing
 /coverage

@@ -7,16 +7,24 @@ const express = require('express')
 , Auth0Strategy = require('passport-auth0')
 require('dotenv').config()
 
+const projectsController = require('./controller/projectsController')
 
-let app = express()
+
+const app = express()
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(cors());
 massive(process.env.CONNECTION_STRING).then( db =>{
-console.log('connected')  
-app.set('db', db)
+    console.log('connected')  
+    app.set('db', db)
 }  );
 
+//ENDPOINTS
+app.get('/projects/img', (req, res) => {
+    app.get('db').getAllProjects().then( response => {
+        res.status(200).send(response)
+    })
+})
 
 app.use(session({
 secret: process.env.SECRET,

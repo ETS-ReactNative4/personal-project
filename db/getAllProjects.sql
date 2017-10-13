@@ -1,0 +1,2 @@
+select img
+from projects;

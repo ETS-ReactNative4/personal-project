@@ -10,6 +10,7 @@ require('dotenv').config()
 
 let app = express()
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }))
 app.use(cors());
 massive(process.env.CONNECTION_STRING).then( db =>{
 console.log('connected')  

@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css?family=Catamaran:200');
+
+/* font-family: 'Catamaran', sans-serif; */
+
+.contact-hero{
+    background: url('contact1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+.contact-header{
+    font-family: 'Catamaran', sans-serif;
+    margin-left: 100px;
+    margin-top: 100px;    
+}
+
+.contact-input{
+    margin-left: 100px;
+    
+}
+
+.mytext{
+    /* width: 400px;
+    height: 200px;
+    resize: none;
+    text-align: start; */
+}

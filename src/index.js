@@ -7,5 +7,12 @@ import registerServiceWorker from './registerServiceWorker';
 import { HashRouter } from 'react-router-dom';
 import { Provider } from "react-redux";
 
-ReactDOM.render(<HashRouter><App /></HashRouter>, document.getElementById('root'));
+import store from './store.js'
+
+ReactDOM.render(
+<HashRouter>
+    <Provider store={store}>
+        <App />
+    </Provider>
+</HashRouter>, document.getElementById('root'));
 registerServiceWorker();

@@ -1,2 +1,2 @@
-select img
+select *
 from projects;

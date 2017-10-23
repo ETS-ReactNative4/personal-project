@@ -31,6 +31,12 @@ app.get('/users/admin', (req, res) => {
         res.status(200).send(response)
     })
 })
+
+// app.put('/update/project/:id', (req, res) => {
+//     let { title, comment} = req.body
+//     app.get('db').updateProjects(title, comment)
+// })
+
 app.use(session({
 secret: process.env.SECRET,
 resave: false,

@@ -11,13 +11,13 @@ class Projects extends Component {
     componentDidMount(){
         const{getProjects} = this.props;
         axios.get('http://localhost:3013/projects/img').then( res => {
-            console.log(res.data)
+            // console.log(res.data)
             getProjects(res.data)
         })
     }
 
     render() {
-        console.log('here' + this.props.projects)
+        console.log(this.props.users)
         return (
             <div>
                 <div className='heroProjects'>
@@ -36,16 +36,32 @@ class Projects extends Component {
                     <div><img className='project1' src={project} alt="loading" /></div>
                     <h3 className='project-info'>This is another one of our projects</h3>
                 </div> */}
-                {this.props.projects.map((item, i) => {
+                
+                {this.props.users.length ?
+                 this.props.projects.map((item, i) => {
                     console.log(item)
-                return <div key={i}>
+                        return <div key={i}>
+                            <h1>YOURE AN ADMIN</h1>
                             <h1 className='project-header'>{item.title}</h1>
-                            <div className='project'>
-                                <div><img className='project1' src={item.img} alt="" /></div>
-                                <h3 className='project-info'>{item.comment_section}</h3>
-                            </div>
+                                <div className='project'>
+                                    <div>
+                                        <img className='project1' src={item.img} alt="" />
+                                    </div>
+                                    <h3 className='project-info'>{item.comment_section}</h3>
+                                </div>
                         </div>
-                })}
+                }) : this.props.projects.map((item, i) => {
+                    console.log(item)
+                        return <div key={i}>
+                            <h1 className='project-header'>{item.title}</h1>
+                                <div className='project'>
+                                    <div>
+                                        <img className='project1' src={item.img} alt="" />
+                                    </div>
+                                    <h3 className='project-info'>{item.comment_section}</h3>
+                                </div>
+                        </div>
+                })  }
             </div>
         )
     }
@@ -54,9 +70,9 @@ class Projects extends Component {
 
 function mapStateToProps(state) {
     if (!state) return {};
-    return {projects: state.projects};
+    return {projects: state.projects,
+            users: state.users};
   }
 
 
   export default connect(mapStateToProps, {getProjects})(Projects)
-

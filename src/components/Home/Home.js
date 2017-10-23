@@ -1,8 +1,19 @@
 import React, { Component } from 'react';
 import './Home.css';
 import NavBar from '../NavBar/NavBar';
+import { getUserInfo } from '../..//ducks/reducer';
+import {connect} from 'react-redux';
+import axios from 'axios';
 
-export default class Home extends Component {
+class Home extends Component {
+
+    componentDidMount(){
+        const{getUserInfo} = this.props;
+        axios.get('http://localhost:3013/users/admin').then( res => {
+            console.log(res.data)
+            getUserInfo(res.data)
+        })
+    }
 
     render() {
         return (
@@ -39,3 +50,11 @@ export default class Home extends Component {
         )
     }
 }
+
+function mapStateToProps(state) {
+    if (!state) return {};
+    return {users: state.users};
+  }
+
+
+  export default connect(mapStateToProps, {getUserInfo})(Home)

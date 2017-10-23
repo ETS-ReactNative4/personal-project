@@ -26,6 +26,11 @@ app.get('/projects/img', (req, res) => {
     })
 })
 
+app.get('/users/admin', (req, res) => {
+    app.get('db').getAllUsers().then( response => {
+        res.status(200).send(response)
+    })
+})
 app.use(session({
 secret: process.env.SECRET,
 resave: false,

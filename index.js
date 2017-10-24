@@ -36,22 +36,27 @@ app.put('/update/project/:id', (req, res) => {
     let { title, comment } = req.body
     let { id } = req.params
     console.log(title, comment, id)
-    app.get('db').updateProjects( [id, title, comment] ).then( response => {
-        res.status(200).send('Updated')
+    app.get('db').updateProjects( [id, title, comment] ).then( () => {
+        app.get('db').getAllProjects().then(response =>{
+        res.status(200).send(response)})
     })
 })
 
 app.post('/new/project', (req, res) => {
     let { title, comment, img, id} = req.body
-    app.get('db').addNewProject([ title, comment, img, id ]).then( response => {
-        res.status(200).send('Added!')
+    app.get('db').addNewProject([ title, comment, img, id ]).then( () => {
+        app.get('db').getAllProjects().then( response => {
+            res.status(200).send(response)
+        })
     })
 })
 
 app.delete('/remove/project/:id', (req, res) => {
     let { id } = req.params
-    app.get('db').deletePost([id]).then( response => {
-        res.status(200).send('deleted')
+    app.get('db').deletePost([id]).then( () => {
+        app.get('db').getAllProjects().then(response => {
+            res.status(200).send(response)
+        })
     })
 })
 

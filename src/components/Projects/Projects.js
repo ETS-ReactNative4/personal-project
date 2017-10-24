@@ -37,7 +37,7 @@ class Projects extends Component {
             title: this.state.inputTitle,
             comment: this.state.inputComment
         })
-        .then(res => {console.log(res)})
+        .then(res => { this.props.getProjects(res.data)})
     }
 
     addNew(){
@@ -47,11 +47,11 @@ class Projects extends Component {
             img: this.state.addedImg,
             id: this.state.userId
         })
-        .then(res => {console.log(res)})
+        .then(res => {this.props.getProjects(res.data)})
     }
 
     deletePost(id){
-        axios.delete(`http://localhost:3013/remove/project/${id}`).then(res => {console.log('deleted')})
+        axios.delete(`http://localhost:3013/remove/project/${id}`).then( (res) => { this.props.getProjects(res.data)})
     }
 
     
@@ -68,13 +68,32 @@ class Projects extends Component {
                         <h1>Current projects we're working on</h1>
                     </div>
                 </div>
+                { this.props.users.length ?
+                <div>
+                    <h3>Add New Project</h3>
+                        <input type="text" placeholder='Title' onChange={ (a) =>{
+                            this.setState({
+                                addedTitle: a.target.value
+                            })  }} />
+                         <input type="text" placeholder='Comment' onChange={ (b) => {
+                            this.setState({
+                                addedComment: b.target.value
+                            })    }} />
+                        <input type="text" placeholder='img url' onChange={ (c) => {
+                            this.setState({
+                                addedImg: c.target.value
+                            })    }} />
+                        <button onClick={() => {this.addNew(this.props.users[0].id)}}>ADD</button>
+                </div>
+                : null}
+                
                 
                 {this.props.users.length ? 
                 //ADMIN BUT NOT EDITING 
                  this.props.projects.map((item, i) => {
                     console.log(this.state.editPost)
                         if (this.state.editPost !== item.id) { return <div key={i}>
-                            <h1>YOURE AN ADMIN and not editing</h1>
+                            {/* <h1>YOURE AN ADMIN and not editing</h1> */}
                             <h1 className='project-header'>{item.title}</h1>
                                 <div className='project'>
                                     <div>
@@ -92,7 +111,7 @@ class Projects extends Component {
                          else { 
                              //ADMIN EDITING
                             return <div key={i}>
-                            <h1>YOURE AN ADMIN and you are editing</h1>
+                            {/* <h1>YOURE AN ADMIN and you are editing</h1> */}
                             <input type='text' value={this.state.inputTitle} className='project-header' onChange={ (en) => {
                                 this.setState({
                                     inputTitle: en.target.value
@@ -116,7 +135,10 @@ class Projects extends Component {
                                     })}}>CANCEL
                                 </button>
                                 {/* SAVE BUTTON */}
-                                <button onClick={() => {this.onSave(item.id)}}>SAVE</button>
+                                <button onClick={() => {this.onSave(item.id)
+                                    this.setState({
+                                        editPost: null
+                                    })}}>SAVE</button>
                                 {/* NEW PROJECT */}
                                 <h3>Add New Project</h3>
                                 <input type="text" placeholder='Title' onChange={ (a) =>{

@@ -7,8 +7,19 @@ import Home from './components/Home/Home';
 import Projects from './components/Projects/Projects';
 import About from './components/About/About';
 import ContactUs from './components/ContactUs/ContactUs';
+import axios from 'axios';
+import { connect } from 'react-redux';
+import { getUserInfo } from './ducks/reducer';
+import { withRouter } from 'react-router-dom';
 
 class App extends Component {
+
+  componentDidMount(){
+    const{getUserInfo} = this.props;
+    axios.get('http://localhost:3013/users/admin').then( res => {
+        getUserInfo(res.data)
+    })
+}
   render() {
     return (
       <div className="App">
@@ -23,4 +34,10 @@ class App extends Component {
   }
 }
 
-export default App;
+function mapStateToProps(state) {
+  if (!state) return {};
+  return {users: state.users};
+}
+
+
+export default withRouter(connect(mapStateToProps, { getUserInfo })(App));

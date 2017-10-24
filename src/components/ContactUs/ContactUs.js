@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import NavBar from '../NavBar/NavBar';
 import './ContactUs.css'
 import axios from 'axios';
+import fb from './fb.png'
 
 export default class ContactUs extends Component {
     constructor(){
@@ -54,7 +55,7 @@ export default class ContactUs extends Component {
                             <input type="submit" value="Send your Message" onClick={ (e)=> this.mailerInfo(e) } />
                         </form>
                     </div>
-
+                    <div className='fbLink'>{fb.png}</div>
                 </div>
             </div>
         )

@@ -9,6 +9,7 @@
     display: flex;
     flex-direction: column; 
     align-items: center; 
+    margin-top: 60px;
 }
 
 
@@ -24,7 +25,8 @@
     font-family: 'Catamaran', sans-serif; 
     display: flex;
     flex-direction: column; 
-    align-items: center; 
+    align-items: center;
+    margin-top: 10px; 
 }
 
 .projects{
@@ -58,3 +60,11 @@
     background-repeat: no-repeat;
 
 }
+
+
+
+/* 
+video#bgvid { 
+    position: absolute;
+    width: 100vw;
+} */

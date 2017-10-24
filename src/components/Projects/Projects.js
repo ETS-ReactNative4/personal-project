@@ -112,11 +112,8 @@ class Projects extends Component {
                                 <button onClick={ () => {
                                     console.log(this.props)
                                     this.setState({
-                                        editPost: item.id,
-                                        inputComment: item.comment_section,
-                                        inputTitle: item.title,
-                                        userId: this.props.users[0].id
-                                    })}}>EDIT
+                                        editPost: null
+                                    })}}>CANCEL
                                 </button>
                                 {/* SAVE BUTTON */}
                                 <button onClick={() => {this.onSave(item.id)}}>SAVE</button>

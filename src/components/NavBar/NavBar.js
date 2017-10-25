@@ -8,11 +8,11 @@ export default class NavBar extends Component{
         return(
             <div>
                 <div className='NavBar'>
-                    <Link to='/'><div>HOME</div></Link>
-                    <Link to='/projects'><div>PROJECTS</div></Link>
+                    <Link to='/'><div className='head'><h3>HOME</h3></div></Link>
+                    <Link to='/projects'><div className='head'><h3>PROJECTS</h3></div></Link>
                     <Link to='/'><div className='logo'>LOGO</div></Link>
-                    <Link to='/about'><div>ABOUT</div></Link>
-                    <Link to='/contactUs'><div>CONTACT US</div></Link>                 
+                    <Link to='/about'><div className='head'><h3>ABOUT</h3></div></Link>
+                    <Link to='/contactUs'><div className='head'><h3>CONTACT US</h3></div></Link>                 
                 </div>
             </div>
         )

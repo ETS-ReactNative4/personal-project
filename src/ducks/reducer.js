@@ -1,5 +1,7 @@
+import axios from 'axios';
+
 const initialState = {
-    users: [],
+    user: false,
     projects: [],
     first_name:'',
     last_name:'',
@@ -17,10 +19,14 @@ const initialState = {
     }
   }
 
-  export function getUserInfo(info){
+  export function getUserInfo(){
+    const userData = axios.get('/auth/me')
+    .then( res => {
+        return res.data
+    })
     return{
       type: GET_USER_INFO,
-      payload: info
+      payload: userData
     }
   }
 
@@ -30,8 +36,15 @@ const initialState = {
     switch(action.type) {
       case GET_PROJECTS:
         return Object.assign({}, state, {projects: action.payload});
-      case GET_USER_INFO:
-        return Object.assign({}, state, {users: action.payload})
+      case GET_USER_INFO + '_FULFILLED':
+        console.log('it worked')
+        return Object.assign({}, state, {user: action.payload});
+        case GET_USER_INFO + '_PENDING':
+        console.log('its pending')
+        return Object.assign({}, state)
+        case GET_USER_INFO + '_REJECTED':
+        console.log('it was rejected')
+        return Object.assign({}, state)
   
       default: 
         return state;

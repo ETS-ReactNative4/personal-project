@@ -3,17 +3,17 @@ import './Home.css';
 import NavBar from '../NavBar/NavBar';
 import { getUserInfo } from '../..//ducks/reducer';
 import {connect} from 'react-redux';
-import axios from 'axios';
+// import axios from 'axios';
 
 class Home extends Component {
 
-    componentDidMount(){
-        const{getUserInfo} = this.props;
-        axios.get('http://localhost:3013/users/admin').then( res => {
-            console.log(res.data)
-            getUserInfo(res.data)
-        })
-    }
+    // componentDidMount(){
+    //     const{getUserInfo} = this.props;
+    //     axios.get('http://localhost:3013/users/admin').then( res => {
+    //         console.log(res.data)
+    //         getUserInfo(res.data)
+    //     })
+    // }
 
     render() {
         return (
@@ -46,9 +46,8 @@ class Home extends Component {
                     <div className='img3'></div>
                     
                 </div>
-                <a href='http://localhost:3013/auth'>
-                        <button>Login</button>
-                    </a>
+                <a href='http://localhost:3013/auth'><button>Login</button></a>
+                {/* <a href='http://localhost:3013/auth/logout'><button>Log out</button></a> */}
             </div>
         )
     }

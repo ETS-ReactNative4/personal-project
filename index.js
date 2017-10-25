@@ -60,6 +60,11 @@ app.delete('/remove/project/:id', (req, res) => {
     })
 })
 
+app.get('/auth/logout', (req, res) => {
+    req.logOut();
+    res.redirect(302, 'http://localhost:3000/#/')
+})
+
 app.use(session({
 secret: process.env.SECRET,
 resave: false,
@@ -76,9 +81,10 @@ clientSecret: process.env.AUTH_CLIENT_SECRET,
 callbackURL: 'http://localhost:3013/auth/callback'
 }, function(accessToken, refreshToken, extraParams, profile, done){
 const db = app.get('db')
+console.log('auth user', profile._json)
 
 db.find_user([ profile._json.email ]).then( user => {
-    console.log(user)
+    console.log('db user', user)
     if(user[0]){
         return done(null, user[0]);
     } else {
@@ -95,8 +101,9 @@ failureRedirect: '/auth'
 }))
 
 app.get('/auth/me', (req, res) => {
+    console.log('session user', req.user)
 if(!req.user) {
-return res.status(401).send(false)
+return res.status(200).send(false)
 }
 return res.status(200).send(req.user)
 })

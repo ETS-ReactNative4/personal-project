@@ -10,4 +10,18 @@
 
 .logo{
     font-size: 24px;
+    margin-top: 25px;
+}
+
+@media (max-width: 675px){
+
+}
+@media (min-width: 1100px){
+    .head h3{
+        font-size: 30px;
+    }
+    .logo{
+        font-size: 35px;
+        margin-top: 40px;
+    }
 }

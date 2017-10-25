@@ -58,8 +58,10 @@ class Projects extends Component {
 
     render() {
         // console.log(this.props.users[0].id)
-        console.log(this.state.inputComment, this.state.inputTitle)
-        console.log('Comment: ' + this.state.addedComment, 'img: ' + this.state.addedImg,'Title: ' + this.state.addedTitle, 'User: ' + this.state.userId)
+        // console.log(this.state.inputComment, this.state.inputTitle)
+        // console.log('Comment: ' + this.state.addedComment, 'img: ' + this.state.addedImg,'Title: ' + this.state.addedTitle, 'User: ' + this.state.userId)
+        // console.log(this.props.users)
+        console.log(this.props)
         return (
             <div>
                 <div className='heroProjects'>
@@ -68,27 +70,32 @@ class Projects extends Component {
                         <h1>Current projects we're working on</h1>
                     </div>
                 </div>
-                { this.props.users.length ?
+                { this.props.user ?
                 <div>
                     <h3>Add New Project</h3>
-                        <input type="text" placeholder='Title' onChange={ (a) =>{
+                        <input type="text" placeholder='Title' value={this.state.addedTitle} onChange={ (a) =>{
                             this.setState({
                                 addedTitle: a.target.value
                             })  }} />
-                         <input type="text" placeholder='Comment' onChange={ (b) => {
+                         <input type="text" placeholder='Comment' value={this.state.addedComment} onChange={ (b) => {
                             this.setState({
                                 addedComment: b.target.value
                             })    }} />
-                        <input type="text" placeholder='img url' onChange={ (c) => {
+                        <input type="text" placeholder='img url' value={this.state.addedImg} onChange={ (c) => {
                             this.setState({
                                 addedImg: c.target.value
                             })    }} />
-                        <button onClick={() => {this.addNew(this.props.users[0].id)}}>ADD</button>
+                        <button onClick={() => {this.addNew(this.props.users[0].id)
+                            this.setState({
+                                addedComment: '',
+                                addedImg: '',
+                                addedTitle: ''
+                            })}}>ADD</button>
                 </div>
                 : null}
                 
                 
-                {this.props.users.length ? 
+                {this.props.user ? 
                 //ADMIN BUT NOT EDITING 
                  this.props.projects.map((item, i) => {
                     console.log(this.state.editPost)
@@ -139,29 +146,7 @@ class Projects extends Component {
                                     this.setState({
                                         editPost: null
                                     })}}>SAVE</button>
-                                {/* NEW PROJECT */}
-                                <h3>Add New Project</h3>
-                                <input type="text" placeholder='Title' onChange={ (a) =>{
-                                    this.setState({
-                                        addedTitle: a.target.value
-                                    })
-                                }} />
-                                <input type="text" placeholder='Comment' onChange={ (b) => {
-                                    this.setState({
-                                        addedComment: b.target.value
-                                    })
-                                }} />
-                                <input type="text" placeholder='img url' onChange={ (c) => {
-                                    this.setState({
-                                        addedImg: c.target.value
-                                    })
-                                }} />
-                                <button onClick={() => {this.addNew(this.props.users[0].id)}}>ADD</button>
-
-                        </div>
-
-                        }
-                })
+                        </div>  }})
                     : 
                     //JUST A USER VIEWING THE PAGE
                     this.props.projects.map((item, i) => {
@@ -185,7 +170,7 @@ class Projects extends Component {
 function mapStateToProps(state) {
     if (!state) return {};
     return {projects: state.projects,
-            users: state.users};
+            user: state.user};
   }
 
 

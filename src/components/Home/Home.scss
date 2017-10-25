@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans+Narrow');
+@import url('https://fonts.googleapis.com/css?family=Catamaran:200');
+
+
+.heroHome{
+    color: white;
+    /* font-family: 'PT Sans Narrow', sans-serif; */
+    font-family: 'Catamaran', sans-serif;
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    margin-top: 60px;
+}
+
+
+.hero-img{
+    background: url('hero1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 550px;
+}
+
+.sub-header{
+    background: #F8F8F8;
+    font-family: 'Catamaran', sans-serif; 
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 20px; 
+}
+
+.projects{
+    display: flex;
+    /* background: #6F6F6F; */
+    justify-content: space-around;
+    /* margin-bottom: 60px; */
+}
+
+.img1{
+    background: url('imagetwo.jpg');
+    width: 100%;
+    height: 200px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    /* margin-left: 30px; */
+
+
+}
+
+.img2{
+    background: url('img3.JPG');
+    width: 100%;
+    height: 200px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.img3{
+    background: url('image.jpg');
+    width: 100%;
+    height: 200px;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+}
+
+@media (max-width: 675px) {
+    .heroHome{
+        font-size: 12px;
+    }
+
+    .sub-header{
+        font-size: 12px;
+        margin-top: 30px;
+        /* margin-bottom: 30px; */
+    }
+
+    .projects{
+        height: 100px;
+        /* margin-bottom: 0px; */
+        /* margin-bottom: 30px; */
+        
+    }
+}
+
+@media (min-width: 1100px) {
+    .heroHome{
+        font-size: 25px;
+        margin-top: 120px;
+    }
+
+    .hero-img{
+        height: 1000px;
+    }
+
+    .sub-header{
+        font-size: 25px;
+        margin-top: 120px;
+        margin-bottom: 120px;
+    }
+    .img1{
+        height: 400px;
+    }
+    .img2{
+        height: 400px;
+    }
+    .img3{
+        height: 400px;
+    }
+}
+
+
+
+/* 
+video#bgvid { 
+    position: absolute;
+    width: 100vw;
+} */

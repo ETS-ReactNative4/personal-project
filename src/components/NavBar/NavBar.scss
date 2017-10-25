@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans+Narrow');
+
+
+
+.NavBar{
+    display: flex;
+    justify-content: space-around;
+    color: #F97A00;
+    font-family: 'PT Sans Narrow', sans-serif;
+}
+
+.logo{
+    font-size: 24px;
+    margin-top: 25px;
+}
+
+.head{
+    text-decoration: none;
+}
+@media (max-width: 675px){
+
+}
+@media (min-width: 1100px){
+    .head h3{
+        font-size: 30px;
+    }
+    .logo{
+        font-size: 35px;
+        margin-top: 40px;
+    }
+}

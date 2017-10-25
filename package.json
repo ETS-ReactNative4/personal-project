@@ -25,12 +25,6 @@
     "redux-promise-middleware": "^4.4.1",
     "request": "^2.83.0"
   },
-  // "scripts": {
-  //   "start": "react-scripts start",
-  //   "build": "react-scripts build",
-  //   "test": "react-scripts test --env=jsdom",
-  //   "eject": "react-scripts eject"
-  // }
   "scripts": {
     "build-css": "node-sass-chokidar src/ -o src/",
     "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",

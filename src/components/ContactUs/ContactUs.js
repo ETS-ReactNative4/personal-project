@@ -22,7 +22,7 @@ export default class ContactUs extends Component {
             from: this.state.from,
             subject: this.state.subject,
             text: this.state.message
-        }).then( res => {console.log(res)})
+        }).then( res => {alert('Message sent')})
     }
 
     render() {
@@ -33,10 +33,10 @@ export default class ContactUs extends Component {
                 <div className='contact-hero'>
                     <NavBar />
                     <div className='contact-header'>
-                        <h1>Contact Us</h1>
                     </div>
                     <div className='contact-input'>
-                        <form>
+                        <h1 className=''>Contact Us</h1>
+                        <form className='mailerstuff'>
                             <input type="text" name="from" placeholder="Whats your email" value={this.state.from} onChange={ (e) => {
                                 this.setState({
                                     from: e.target.value

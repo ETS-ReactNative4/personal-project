@@ -1,5 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=PT+Sans+Narrow");
 @import url("https://fonts.googleapis.com/css?family=Catamaran:200");
+.header {
+  background: #DADADA; }
+
 .heroHome {
   color: white;
   /* font-family: 'PT Sans Narrow', sans-serif; */
@@ -16,7 +19,6 @@
   height: 550px; }
 
 .sub-header {
-  background: #F8F8F8;
   font-family: 'Catamaran', sans-serif;
   display: flex;
   flex-direction: column;
@@ -28,27 +30,29 @@
   display: flex;
   /* background: #6F6F6F; */
   justify-content: space-around;
-  /* margin-bottom: 60px; */ }
+  /* margin-bottom: 60px; */
+  margin-top: -20px; }
 
 .img1 {
   background: url("imagetwo.jpg");
   width: 100%;
-  height: 200px;
+  height: 195px;
   background-size: contain;
   background-repeat: no-repeat;
+  margin-bottom: -10px;
   /* margin-left: 30px; */ }
 
 .img2 {
   background: url("img3.JPG");
   width: 100%;
-  height: 200px;
+  height: 195px;
   background-size: contain;
   background-repeat: no-repeat; }
 
 .img3 {
   background: url("image.jpg");
   width: 100%;
-  height: 200px;
+  height: 195px;
   background-size: contain;
   background-repeat: no-repeat; }
 

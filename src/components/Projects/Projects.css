@@ -1,10 +1,13 @@
 @import url("https://fonts.googleapis.com/css?family=Catamaran:200");
 /* font-family: 'Catamaran', sans-serif; */
-.heroProjects {
-  background: url("hero2.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 550px; }
+.project-parent {
+  background: #DADADA; }
+
+.Mission {
+  font-family: 'Catamaran', sans-serif;
+  margin-left: 60px;
+  text-transform: uppercase;
+  margin-top: 50px; }
 
 .headerProjects {
   color: black;
@@ -13,23 +16,43 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 50px; }
+  margin-top: 80px; }
 
 .project1 {
-  height: 100%;
-  width: 30%;
-  font-family: 'Catamaran', sans-serif;
-  margin-left: 200px; }
+  font-family: 'Catamaran', sans-serif; }
 
 .project {
   display: flex;
-  justify-content: space-around;
-  font-family: 'Catamaran', sans-serif; }
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Catamaran', sans-serif;
+  width: 100vw; }
 
 .project-header {
   font-family: 'Catamaran', sans-serif;
   margin-left: 200px;
-  margin-top: 100px; }
+  margin-top: 100px;
+  margin-bottom: 40px; }
 
-.project-info {
-  margin-right: 300px; }
+img {
+  width: 400px;
+  height: 300px; }
+
+h3 {
+  margin-top: 20px; }
+
+.project-input {
+  display: flex;
+  flex-direction: column; }
+
+.project-input input {
+  width: 30%;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  resize: none; }
+
+.project-input button {
+  width: 30%; }

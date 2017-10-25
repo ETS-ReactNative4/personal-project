@@ -1,22 +1,16 @@
-@import url('https://fonts.googleapis.com/css?family=Catamaran:200');
+@import url("https://fonts.googleapis.com/css?family=Catamaran:200");
+.about-hero {
+  background: url("about.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh; }
 
-
-
-.about-hero{
-    background: url('about.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
-}
-
-.about-us{
-    background: #B7B5B5;
-    height: 500px;
-    width: 600px;
-    margin-left: 228px;
-    margin-top: 100px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-family: 'Catamaran', sans-serif;
-}
+.about-us {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  background: #B0ADAD;
+  height: 500px;
+  width: 600px;
+  font-family: 'Catamaran', sans-serif; }

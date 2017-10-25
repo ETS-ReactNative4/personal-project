@@ -63,15 +63,21 @@ class Projects extends Component {
         // console.log(this.props.users)
         console.log(this.props)
         return (
-            <div>
+            <div className='project-parent'>
                 <div className='heroProjects'>
                     <NavBar />
+                    <div className='Mission'>
+                        <h1>Our Mission</h1>
+                        <h3>Our goal is to provide error-free services that are second to none in our industry;<br />
+                         be competitively priced yet provide a profitable return for our company; maintain job security
+                          for all our employees. Our focus on quality affects all company activities.</h3>
+                    </div>
                     <div className='headerProjects'>
-                        <h1>Current projects we're working on</h1>
+                        <h2>Current projects we're working on</h2>
                     </div>
                 </div>
                 { this.props.user ?
-                <div>
+                <div className='project-input'>
                     <h3>Add New Project</h3>
                         <input type="text" placeholder='Title' value={this.state.addedTitle} onChange={ (a) =>{
                             this.setState({
@@ -154,9 +160,7 @@ class Projects extends Component {
                         return <div key={i}>
                             <h1 className='project-header'>{item.title}</h1>
                                 <div className='project'>
-                                    <div>
-                                        <img className='project1' src={item.img} alt="" />
-                                    </div>
+                                    <img className='project1' src={item.img} alt="" />
                                     <h3 className='project-info'>{item.comment_section}</h3>
                                 </div>
                         </div>

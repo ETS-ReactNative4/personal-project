@@ -1,16 +1,28 @@
 @import url("https://fonts.googleapis.com/css?family=Catamaran:200");
 .about-hero {
-  background: url("about.jpg");
-  background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh; }
+  height: 60vh; }
 
 .about-us {
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
-  background: #B0ADAD;
+  background: #DDDDDD;
   height: 500px;
-  width: 600px;
-  font-family: 'Catamaran', sans-serif; }
+  width: 100vw;
+  margin-top: -4px;
+  font-family: 'Catamaran', sans-serif;
+  text-transform: uppercase; }
+
+iframe {
+  height: 70vh;
+  width: 100vw; }
+
+@media (max-width: 675px) {
+  .about-us {
+    height: 600px; } }
+
+@media (max-width: 450px) {
+  .about-us {
+    height: 900px; } }

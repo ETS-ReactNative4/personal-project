@@ -60,10 +60,7 @@ app.delete('/remove/project/:id', (req, res) => {
     })
 })
 
-app.get('/auth/logout', (req, res) => {
-    req.logOut();
-    res.redirect(302, 'http://localhost:3000/#/')
-})
+
 
 app.use(session({
 secret: process.env.SECRET,
@@ -106,6 +103,11 @@ if(!req.user) {
 return res.status(200).send(false)
 }
 return res.status(200).send(req.user)
+})
+
+app.get('/auth/logout', (req, res) => {
+    req.logOut();
+    res.redirect(302, 'http://localhost:3000/#/')
 })
 
 passport.serializeUser( (user, done) => {

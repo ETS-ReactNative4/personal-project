@@ -3,10 +3,10 @@
 
 
 .about-hero{
-    background: url('about.jpg');
-    background-repeat: no-repeat;
+    // background: url('about.jpg');
+    // background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
+    height: 60vh;
 }
 
 .about-us{
@@ -14,10 +14,29 @@
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
-    background: #B0ADAD;
+    background: #DDDDDD;
     height: 500px;
-    width: 600px;
+    width: 100vw;
     // margin-left: 228px;
-    // margin-top: 100px;
+    margin-top: -4px;
     font-family: 'Catamaran', sans-serif;
+    text-transform: uppercase;
+    // padding-top: 20px;
+}
+
+iframe{
+    height: 70vh;
+    width: 100vw;
+}
+
+@media(max-width: 675px){
+    .about-us{
+        height: 600px;
+    }
+}
+
+@media(max-width: 450px){
+    .about-us{
+        height: 900px;
+    }
 }

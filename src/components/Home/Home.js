@@ -20,9 +20,7 @@ class Home extends Component {
             <div className='header'>
                 <div className='hero-img'>
                 <NavBar />
-                {/* <video playsInLine autoPlay muted loop poster="" className='hero-img' id="bgvid">
-                    <source src="https://d3ciwvs59ifrt8.cloudfront.net/8c05758d-460a-44f2-af7d-384a69e35e11/3961aac8-56e6-40b3-a724-dc7efc9f91f6.mp4" type="video/mp4" />
-                </video> */}
+                
                     <div className='heroHome'>
                         <h1>TLC</h1>
                         <h3>The Terry Larsen family of companies are constantly working hard to try and improve<br />
@@ -46,7 +44,7 @@ class Home extends Component {
                     <div className='img3'></div>
                 </div>
                 <a href='http://localhost:3013/auth'><button>Login</button></a>
-                {/* <a href='http://localhost:3013/auth/logout'><button>Log out</button></a> */}
+                <a href='http://localhost:3013/auth/logout'><button>Log out</button></a>
             </div>
         )
     }

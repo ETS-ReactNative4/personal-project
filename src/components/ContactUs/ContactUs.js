@@ -37,7 +37,7 @@ export default class ContactUs extends Component {
                     <div className='contact-input'>
                         <h1 className=''>Contact Us</h1>
                         <form className='mailerstuff'>
-                            <input type="text" name="from" placeholder="Whats your email" value={this.state.from} onChange={ (e) => {
+                            <input type="text" name="from" placeholder="Enter your email" value={this.state.from} onChange={ (e) => {
                                 this.setState({
                                     from: e.target.value
                                 })

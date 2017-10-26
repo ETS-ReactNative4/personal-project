@@ -15,6 +15,9 @@
   font-family: 'Catamaran', sans-serif;
   text-transform: uppercase; }
 
+.about-us h1 {
+  color: #D93804; }
+
 iframe {
   height: 70vh;
   width: 100vw; }

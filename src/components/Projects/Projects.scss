@@ -70,6 +70,7 @@ h3{
 .project-input{
     display: flex;
     flex-direction: column;
+    padding-left: 50px;
 }
 
 .project-input input{
@@ -84,5 +85,13 @@ h3{
 }
 
 .project-input button{
-    width: 30%
+    width: 50px;
 }
+
+
+@media(max-width:675){
+    .project-input input{
+        width: 1000px;;
+    }
+}
+

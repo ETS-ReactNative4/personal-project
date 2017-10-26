@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import NavBar from '../NavBar/NavBar';
 import './ContactUs.css'
 import axios from 'axios';
-import fb from './fb.png'
+import fb from './fb.png';
+import swal from 'sweetalert';
 
 export default class ContactUs extends Component {
     constructor(){
@@ -22,7 +23,12 @@ export default class ContactUs extends Component {
             from: this.state.from,
             subject: this.state.subject,
             text: this.state.message
-        }).then( res => {alert('Message sent')})
+        }).then( res => {swal('Thank You', 'Your message has been sent', 'success' )
+    this.setState({
+        from: '',
+        subject: '',
+        message: ''
+    })})
     }
 
     render() {
@@ -36,6 +42,7 @@ export default class ContactUs extends Component {
                     </div>
                     <div className='contact-input'>
                         <h1 className=''>Contact Us</h1>
+                        {/* <h2>Lets us Know how we can help you!</h2> */}
                         <form className='mailerstuff'>
                             <input type="text" name="from" placeholder="Enter your email" value={this.state.from} onChange={ (e) => {
                                 this.setState({
@@ -52,7 +59,7 @@ export default class ContactUs extends Component {
                                     message: e.target.value
                                 })
                             }} className='mytext' required />
-                            <input type="submit" value="Send your Message" onClick={ (e)=> this.mailerInfo(e) } />
+                            <input type="submit" value="Send your Message" onClick={(this.state.from && this.state.subject && this.state.message ? (e)=> this.mailerInfo(e) : false) } />
                         </form>
                     </div>
                     <div className='fbLink'>{fb.png}</div>

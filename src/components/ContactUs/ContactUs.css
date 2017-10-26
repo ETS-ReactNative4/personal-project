@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Catamaran:200");
+@import url("https://fonts.googleapis.com/css?family=Unlock");
 /* font-family: 'Catamaran', sans-serif; */
 .contact-hero {
   background: url("contact1.jpg");
@@ -20,6 +21,11 @@
   font-family: 'Catamaran', sans-serif;
   text-transform: uppercase;
   font-size: 40px; }
+
+.contact-input h2 {
+  font-family: 'Catamaran', sans-serif;
+  text-transform: uppercase;
+  font-size: 35px; }
 
 .fbLink {
   height: 20px;

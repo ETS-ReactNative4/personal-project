@@ -4,6 +4,7 @@ import './Projects.css';
 import { getProjects } from '../..//ducks/reducer';
 import { connect } from 'react-redux';
 import axios from 'axios';
+import swal from 'sweetalert';
 
 
 class Projects extends Component {
@@ -80,7 +81,7 @@ class Projects extends Component {
                     <div className='Mission'>
                         <h1>Our Mission</h1>
                         <h3>Our goal is to provide error-free services that are second to none in our industry;<br />
-                         be competitively priced yet provide a profitable return for our company; maintain job security
+                         be competitively priced yet provide a profitable return for our company;<br /> maintain job security
                           for all our employees. Our focus on quality affects all company activities.</h3>
                     </div>
                     <div className='headerProjects'>
@@ -102,7 +103,8 @@ class Projects extends Component {
                             this.setState({
                                 addedImg: c.target.value
                             })    }} />
-                        <button onClick={() => {this.addNew()
+                        <button className="add" onClick={() => {this.addNew()
+                            swal('Accepted', 'Your project has been posted!', 'success')
                             this.setState({
                                 addedComment: '',
                                 addedImg: '',
@@ -131,7 +133,8 @@ class Projects extends Component {
                                         editPost: item.id,
                                         inputComment: item.comment_section,
                                         inputTitle: item.title})}}>EDIT</button>
-                                <button onClick={ ()=> {this.deletePost(item.id)}}>DELETE</button>
+                                <button onClick={ ()=> {this.deletePost(item.id)
+                                    swal('SUCCESS', 'Project deleted', 'success')}}>DELETE</button>
                         </div>}
                          else { 
                              //ADMIN EDITING
@@ -161,6 +164,7 @@ class Projects extends Component {
                                 </button>
                                 {/* SAVE BUTTON */}
                                 <button onClick={() => {this.onSave(item.id)
+                                    swal('SUCCESS', 'Project Updated', 'success')
                                     this.setState({
                                         editPost: null
                                     })}}>SAVE</button>

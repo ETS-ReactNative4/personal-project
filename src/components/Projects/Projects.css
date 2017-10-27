@@ -38,8 +38,7 @@ h3 {
 .project-input {
   display: flex;
   flex-direction: column;
-  padding-left: 50px;
-  padding-top: 10px; }
+  padding-left: 50px; }
 
 .project-input input {
   width: 600px;

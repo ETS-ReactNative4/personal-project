@@ -127,19 +127,19 @@ class Projects extends Component {
                                     </div>
                                     <h3 className='project-info'>{item.comment_section}</h3>
                                 </div>
-                                <button onClick={ () => {
+                                <button className='editingBtn' onClick={ () => {
                                     this.setState({
                                         editPost: item.id,
                                         inputComment: item.comment_section,
                                         inputTitle: item.title})}}>EDIT</button>
-                                <button onClick={ ()=> {this.deletePost(item.id)
+                                <button className='editingBtn' onClick={ ()=> {this.deletePost(item.id)
                                     swal('SUCCESS', 'Project deleted', 'success')}}>DELETE</button>
                         </div>}
                          else { 
                              //ADMIN EDITING
                             return <div key={i}>
                             {/* <h1>YOURE AN ADMIN and you are editing</h1> */}
-                            <input type='text' value={this.state.inputTitle} className='project-header' onChange={ (en) => {
+                            <input className='inputEdit' type='text' value={this.state.inputTitle} className='project-header' onChange={ (en) => {
                                 this.setState({
                                     inputTitle: en.target.value
                                 })
@@ -148,20 +148,20 @@ class Projects extends Component {
                                     <div>
                                         <img className='project1' src={item.img} alt="" />
                                     </div>
-                                    <input type='text' value={this.state.inputComment} className='project-info' onChange={ (e) => {
+                                    <input className='inputEdit' type='text' value={this.state.inputComment} className='project-info' onChange={ (e) => {
                                         this.setState({
                                             inputComment: e.target.value
                                         })
                                     }}></input>
                                 </div>
                                     {/* EDIT BUTTON */}
-                                <button onClick={ () => {
+                                <button className='editingBtn' onClick={ () => {
                                     this.setState({
                                         editPost: null
                                     })}}>CANCEL
                                 </button>
                                 {/* SAVE BUTTON */}
-                                <button onClick={() => {this.onSave(item.id)
+                                <button className='editingBtn' onClick={() => {this.onSave(item.id)
                                     swal('SUCCESS', 'Project Updated', 'success')
                                     this.setState({
                                         editPost: null

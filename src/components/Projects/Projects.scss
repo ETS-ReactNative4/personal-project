@@ -11,8 +11,8 @@
 }
 
 .project-parent{
-    background: #DADADA
-    
+    background: #DADADA;
+    width: 100%;
 }
 
 .Mission{
@@ -33,15 +33,6 @@
     margin-top: 80px;
 }
 
-.project1{
-    // height: 100%;
-    // width: 30%;
-    font-family: 'Catamaran', sans-serif;
-    // margin-left: 200px;
-    width: 400px;
-    height: 300px;
-    
-}
 
 .project{
     display: flex;
@@ -61,39 +52,69 @@
 }
 
 // img{
-//     width: 400px;
-//     height: 300px;
-// }
-
-h3{
-    margin-top: 20px;
-}
-
-.project-input{
-    display: flex;
-    flex-direction: column;
-    padding-left: 50px;
-}
-
-.project-input input{
-    width: 30%;
-    // height: 150px;
-    padding: 12px 20px;
-    box-sizing: border-box;
-    border: 2px solid #ccc;
-    border-radius: 4px;
-    background-color: #f8f8f8;
-    resize: none;
-}
-
-.project-input button{
-    width: 50px;
-}
-
-
-@media(max-width:675){
+    //     width: 400px;
+    //     height: 300px;
+    // }
+    
+    h3{
+        margin-top: 20px;
+    }
+    
+    .project-input{
+        display: flex;
+        flex-direction: column;
+        padding-left: 50px;
+    }
+    
     .project-input input{
-        width: 1000px;;
+        padding-top: 30px
+        width: 600px;
+        // height: 150px;
+        padding: 12px 20px;
+        box-sizing: border-box;
+        border: 2px solid #ccc;
+        border-radius: 4px;
+        background-color: #f8f8f8;
+        resize: none;
+    }
+    
+    .project-input button{
+        width: 50px;
+    }
+
+    .project1{
+        // height: 100%;
+        // width: 30%;
+        font-family: 'Catamaran', sans-serif;
+        // margin-left: 200px;
+        width: 500px;
+        height: 400px;
+    }
+
+    .editingBtn{
+        margin-left: 30px;
+    }
+
+    input{
+        width: 20%;
+        // height: 150px;
+        padding: 12px 20px;
+        box-sizing: border-box;
+        border: 2px solid #ccc;
+        border-radius: 4px;
+        background-color: #f8f8f8;
+        resize: none;
+    }
+    
+    @media(max-width: 1100px){
+        .project1{
+            width: 400px;
+            height: 300px;
+        }
+    }
+    @media(max-width:675px){
+    .project-input input{
+        width: 300px;
     }
 
     .project1{

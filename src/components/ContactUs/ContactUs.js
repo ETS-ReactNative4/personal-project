@@ -68,7 +68,7 @@ export default class ContactUs extends Component {
                              </form>
                              <div className='icons'>
                                 <a href="https://www.facebook.com/tlincorporated"><i className="fa fa-facebook-official fa-2x" aria-hidden="true"></i></a>
-                                <a href="https://plus.google.com/u/0/103973887981928156371"><i class="fa fa-google-plus-official fa-2x" aria-hidden="true"></i></a>
+                                <a href="https://plus.google.com/u/0/103973887981928156371"><i className="fa fa-google-plus-official fa-2x" aria-hidden="true"></i></a>
                              </div>
 
 

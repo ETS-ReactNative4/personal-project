@@ -8,7 +8,7 @@ export default class NavBar extends Component{
         return(
             <div>
                 <div className='NavBar'>
-                <h1 className='TLC'>TLC Crushing</h1>
+                <a className='logo-name'href="http://localhost:3000/#/"><h1 className='TLC'>TLC Crushing</h1></a>
                     <Link style={{textDecoration: 'none', color: 'white'}}to='/'><div className='head'><h3>HOME</h3></div></Link>
                     <Link style={{textDecoration: 'none', color: 'white'}} to='/projects'><div className='head'><h3>PROJECTS</h3></div></Link>
                     {/* <Link to='/'><div className='logo'>LOGO</div></Link> */}

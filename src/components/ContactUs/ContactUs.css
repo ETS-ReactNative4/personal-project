@@ -1,6 +1,12 @@
 @import url("https://fonts.googleapis.com/css?family=Catamaran:200");
 @import url("https://fonts.googleapis.com/css?family=Unlock");
 /* font-family: 'Catamaran', sans-serif; */
+.flexin {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 90vh; }
+
 .contact-hero {
   background: url("contact1.jpg");
   background-repeat: no-repeat;
@@ -8,14 +14,15 @@
   height: 100vh; }
 
 .contact-header {
-  font-family: 'Catamaran', sans-serif;
-  margin-left: 100px;
-  margin-top: 60px; }
+  font-family: 'Catamaran', sans-serif; }
 
 .contact-input {
   display: flex;
   flex-direction: column;
-  align-items: center; }
+  align-items: center;
+  background: #DADADA;
+  width: 500px;
+  padding-bottom: 15px; }
 
 .contact-input h1 {
   font-family: 'Catamaran', sans-serif;
@@ -26,10 +33,6 @@
   font-family: 'Catamaran', sans-serif;
   text-transform: uppercase;
   font-size: 35px; }
-
-.fbLink {
-  height: 20px;
-  width: 20px; }
 
 .mytext {
   /* width: 400px;
@@ -51,3 +54,11 @@
   border-radius: 4px;
   background-color: #f8f8f8;
   resize: none; }
+
+.icons {
+  display: flex;
+  justify-content: space-around; }
+
+.icons a {
+  margin-left: 10px;
+  margin-top: 10px; }

@@ -10,7 +10,7 @@ export default class About extends Component {
             <div>
                 <div className='about-hero'>
                 <NavBar />
-                <iframe src="https://www.youtube.com/embed/0LZsUDYHuec?rel=0&showinfo=0&autoplay=1&loop=1&controls=0&autohide=1" frameborder="0" allowfullscreen></iframe>
+                <iframe title='vid' src="https://www.youtube.com/embed/0LZsUDYHuec?rel=0&showinfo=0&autoplay=1&loop=1&controls=0&autohide=1" frameborder="0" allowfullscreen></iframe>
                     <div className='about-us'>
                         <h1>TLC ROCK</h1>
                         <h3>

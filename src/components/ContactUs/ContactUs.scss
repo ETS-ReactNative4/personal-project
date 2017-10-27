@@ -3,7 +3,14 @@
 
 
 /* font-family: 'Catamaran', sans-serif; */
+.flexin{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    // background: red;
+    height: 90vh;
 
+}
 .contact-hero{
     background: url('contact1.jpg');
     background-repeat: no-repeat;
@@ -13,14 +20,18 @@
 
 .contact-header{
     font-family: 'Catamaran', sans-serif;
-    margin-left: 100px;
-    margin-top: 60px;    
+    // margin-left: 100px;
+    // margin-top: 60px;    
 }
 
 .contact-input{
     display: flex;
     flex-direction: column;    
     align-items: center;
+    // justify-content: space-around;
+    background: #DADADA;
+    width: 500px;
+    padding-bottom: 15px;
 }
 .contact-input h1{
     font-family: 'Catamaran', sans-serif;
@@ -31,11 +42,12 @@
     font-family: 'Catamaran', sans-serif;
     text-transform: uppercase;
     font-size: 35px; 
+    // width: 500px;
 }
 
 .fbLink{
-    height: 20px;
-    width: 20px;
+    // height: 20px;
+    // width: 20px;
 }
 
 .mytext{
@@ -62,3 +74,13 @@
     background-color: #f8f8f8;
     resize: none;
 }
+
+.icons{
+    display: flex;
+    justify-content: space-around;
+}
+.icons a{
+    margin-left: 10px;
+    margin-top: 10px;
+}
+

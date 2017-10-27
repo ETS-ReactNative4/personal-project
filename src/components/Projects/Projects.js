@@ -54,7 +54,7 @@ class Projects extends Component {
     addNew(){
         axios.post(`http://localhost:3013/new/project`, {
             title: this.state.addedTitle,
-            comment: this.state.addedTitle,
+            comment: this.state.addedComment,
             img: this.state.addedImg,
             id: this.state.userId
         })
@@ -118,7 +118,6 @@ class Projects extends Component {
                 {this.props.user ? 
                 //ADMIN BUT NOT EDITING 
                  this.props.projects.map((item, i) => {
-                    {/* console.log(this.state.editPost) */}
                         if (this.state.editPost !== item.id) { return <div key={i}>
                             {/* <h1>YOURE AN ADMIN and not editing</h1> */}
                             <h1 className='project-header'>{item.title}</h1>
@@ -157,7 +156,6 @@ class Projects extends Component {
                                 </div>
                                     {/* EDIT BUTTON */}
                                 <button onClick={ () => {
-                                    {/* console.log(this.props) */}
                                     this.setState({
                                         editPost: null
                                     })}}>CANCEL
@@ -172,7 +170,6 @@ class Projects extends Component {
                     : 
                     //JUST A USER VIEWING THE PAGE
                     this.props.projects.map((item, i) => {
-                    {/* console.log(item) */}
                         return <div key={i}>
                             <h1 className='project-header'>{item.title}</h1>
                                 <div className='project'>

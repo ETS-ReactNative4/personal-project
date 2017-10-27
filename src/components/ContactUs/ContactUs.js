@@ -43,7 +43,11 @@ export default class ContactUs extends Component {
                     <div className='flexin'>
                         <div className='contact-input'>
                             <h1 className=''>Contact Us</h1>
+                            <p>Address: 178 S 1800 W St, Lindon, UT 84042<br />
+                                Hours: Mon-Fri 7AM–5PM<br />
+                                Phone: (801) 785-9322</p>
                             <form className='mailerstuff'>
+                                <p>Send Us an Email!</p>
                                 <input type="text" name="from" placeholder="Enter your email" value={this.state.from}
                                  onChange={ (e) => {
                                     this.setState({

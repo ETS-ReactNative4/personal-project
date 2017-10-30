@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Catamaran:200');
+@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:800');
+
 
 /* font-family: 'Catamaran', sans-serif; */
 
@@ -20,6 +22,8 @@
     margin-left: 60px;
     text-transform: uppercase;
     margin-top: 50px;
+    animation: fadein 2s;
+    
     
 }
 
@@ -27,6 +31,7 @@
     color:black;
     /* font-family: 'PT Sans Narrow', sans-serif; */
     font-family: 'Catamaran', sans-serif;
+    // font-family: 'Alegreya Sans SC', sans-serif;    
     display: flex;
     flex-direction: column; 
     align-items: center; 
@@ -41,11 +46,13 @@
     // justify-content: space-around;
     font-family: 'Catamaran', sans-serif;
     width: 100vw;
-    animation: fadein 2s;
+    // animation: fadein 2s;
 }
 
 .project-header{
-    font-family: 'Catamaran', sans-serif;
+    // font-family: 'Catamaran', sans-serif;
+    font-family: 'Alegreya Sans SC', sans-serif;
+    
     margin-left: 200px;
     margin-top: 100px;
     margin-bottom: 40px;

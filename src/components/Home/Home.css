@@ -18,6 +18,9 @@
   font-size: 70px;
   color: #D93804; }
 
+.heroHome {
+  animation: fadein 2s; }
+
 .hero-img {
   background: url("hero1.jpg");
   background-repeat: no-repeat;
@@ -38,7 +41,8 @@
 .sub-header h2 {
   font-family: 'Unlock', cursive;
   color: #D93804;
-  font-size: 50px; }
+  font-size: 50px;
+  animation: fadein 2s; }
 
 .HomeImage {
   display: flex;

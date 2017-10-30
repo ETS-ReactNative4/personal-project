@@ -5,6 +5,8 @@ import { getProjects } from '../..//ducks/reducer';
 import { connect } from 'react-redux';
 import axios from 'axios';
 import swal from 'sweetalert';
+// import ScrollAnimation from 'react-animate-on-scroll';
+
 
 
 class Projects extends Component {
@@ -171,11 +173,13 @@ class Projects extends Component {
                     //JUST A USER VIEWING THE PAGE
                     this.props.projects.map((item, i) => {
                         return <div key={i}>
+                        {/* <ScrollAnimation animateIn="fadeIn" animateOnce='true'> */}
                             <h1 className='project-header'>{item.title}</h1>
                                 <div className='project'>
                                     <img className='project1' src={item.img} alt="" />
                                     <h3 className='project-info'>{item.comment_section}</h3>
                                 </div>
+                        {/* </ScrollAnimation> */}
                         </div>
                 })  }
             </div>

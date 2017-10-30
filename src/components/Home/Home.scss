@@ -22,7 +22,12 @@
 .heroHome h1{
     font-size: 70px;
     color: #D93804;
+    // animation: fadein 2s;
     
+}
+
+.heroHome{
+    animation: fadein 2s;
 }
 
 .hero-img{
@@ -50,6 +55,7 @@
     // font-family: 'New Rocker', cursive;
     color: #D93804;
     font-size: 50px;
+    animation: fadein 2s;
     
 }
 

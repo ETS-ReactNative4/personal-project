@@ -61,7 +61,7 @@ app.delete('/remove/project/:id', (req, res) => {
 })
 
 
-
+//AUTH0
 app.use(session({
 secret: process.env.SECRET,
 resave: false,
@@ -75,7 +75,7 @@ passport.use(new Auth0Strategy({
 domain: process.env.AUTH_DOMAIN,
 clientID: process.env.AUTH_CLIENTID,
 clientSecret: process.env.AUTH_CLIENT_SECRET,
-callbackURL: 'http://localhost:3013/auth/callback'
+callbackURL: process.env.AUTH_CALLBACK
 }, function(accessToken, refreshToken, extraParams, profile, done){
 const db = app.get('db')
 console.log('auth user', profile._json)
@@ -93,8 +93,8 @@ db.find_user([ profile._json.email ]).then( user => {
 app.get('/auth', passport.authenticate('auth0'));
 
 app.get('/auth/callback', passport.authenticate('auth0', {
-successRedirect: 'http://localhost:3000/',
-failureRedirect: '/auth'
+successRedirect: process.env.SUCCESS_REDIRECT,
+failureRedirect: process.env.FAILURE_REDIRECT
 }))
 
 app.get('/auth/me', (req, res) => {
@@ -107,7 +107,7 @@ return res.status(200).send(req.user)
 
 app.get('/auth/logout', (req, res) => {
     req.logOut();
-    res.redirect(302, 'http://localhost:3000/#/')
+    res.redirect(302, process.env.SUCCESS_REDIRECT)
 })
 
 passport.serializeUser( (user, done) => {

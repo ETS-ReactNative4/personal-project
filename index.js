@@ -11,7 +11,7 @@ const projectsController = require('./controller/projectsController')
 
 
 const app = express()
-// app.use( express.static( `${__dirname}/../build` ) );
+app.use( express.static( `${__dirname}/../build` ) );
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(cors());
@@ -122,10 +122,14 @@ done(null, user);
 })
 
 
-require("./router")(app)
+// require("./router")(app)
 
 
 
+const path = require('path')
+app.get('*', (req, res)=>{
+  res.sendFile(path.join(__dirname, '../build/index.html'));
+})
 
 
 const PORT = 3013

@@ -16,7 +16,10 @@ class App extends Component {
 
   componentDidMount(){
         this.props.getUserInfo()
+        document.title = 'TLC Crushing'
 }
+
+
   render() {
     return (
       <div className="App">

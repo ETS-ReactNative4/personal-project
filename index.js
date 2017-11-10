@@ -11,7 +11,7 @@ const projectsController = require('./controller/projectsController')
 
 
 const app = express()
-app.use( express.static( `${__dirname}/../build` ) );
+app.use( express.static( `${__dirname}/build` ) );
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(cors());

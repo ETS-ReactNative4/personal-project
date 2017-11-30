@@ -8,7 +8,7 @@ export default class Home extends Component {
 
     // componentDidMount(){
     //     const{getUserInfo} = this.props;
-    //     axios.get('http://localhost:3013/users/admin').then( res => {
+    //     axios.get('/users/admin').then( res => {
     //         console.log(res.data)
     //         getUserInfo(res.data)
     //     })

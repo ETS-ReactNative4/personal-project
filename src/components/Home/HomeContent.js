@@ -19,8 +19,8 @@ function HomeContent() {
                     </h4>
                 </div>
                 <HomeProjects />
-                <a href='http://localhost:3013/auth'><button>Login</button></a>
-                <a href='http://localhost:3013/auth/logout'><button>Log out</button></a>
+                <a href='/auth'><button>Login</button></a>
+                <a href='/auth/logout'><button>Log out</button></a>
             </div>
         )
     }

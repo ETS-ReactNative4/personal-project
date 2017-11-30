@@ -28,7 +28,7 @@ class Projects extends Component {
 
     componentDidMount(){
         const{getProjects} = this.props;
-        axios.get('http://localhost:3013/projects/img').then( res => {
+        axios.get('/projects/img').then( res => {
             // console.log(res.data)
             getProjects(res.data)
         })
@@ -46,7 +46,7 @@ class Projects extends Component {
 
     onSave(id){
         // console.log('Hello')
-        axios.put(`http://localhost:3013/update/project/${id}`, {
+        axios.put(`/update/project/${id}`, {
             title: this.state.inputTitle,
             comment: this.state.inputComment
         })
@@ -54,7 +54,7 @@ class Projects extends Component {
     }
 
     addNew(){
-        axios.post(`http://localhost:3013/new/project`, {
+        axios.post(`/new/project`, {
             title: this.state.addedTitle,
             comment: this.state.addedComment,
             img: this.state.addedImg,
@@ -64,7 +64,7 @@ class Projects extends Component {
     }
 
     deletePost(id){
-        axios.delete(`http://localhost:3013/remove/project/${id}`).then( (res) => { this.props.getProjects(res.data)})
+        axios.delete(`/remove/project/${id}`).then( (res) => { this.props.getProjects(res.data)})
     }
 
     

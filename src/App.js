@@ -16,7 +16,7 @@ class App extends Component {
 
   componentDidMount(){
         this.props.getUserInfo()
-        document.title = 'TLC Crushing'
+        document.title = 'TLC Rock Products'
 }
 
 

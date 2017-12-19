@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import NavBar from '../NavBar/NavBar';
+import MobileNav from '../MobileNav/MobileNav';
 import './ContactUs.css'
 import axios from 'axios';
+import MediaQuery from 'react-responsive';
 // import fb from './fb.png';
 import swal from 'sweetalert';
 import 'font-awesome/css/font-awesome.min.css';
@@ -39,7 +41,13 @@ export default class ContactUs extends Component {
         return (
             <div>
                 <div className='contact-hero'>
-                    <NavBar />
+                    <MediaQuery query="(min-width: 850.1px)">
+                        <NavBar />
+                    </MediaQuery>
+                    
+                    <MediaQuery query="(max-width: 850px)">
+                        <MobileNav />
+                    </MediaQuery>
                     <div className='flexin'>
                         <div className='contact-input'>
                             <h1 className=''>Contact Us</h1>

@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import NavBar from '../NavBar/NavBar';
+import MobileNav from '../MobileNav/MobileNav';
 import './About.css'
+import MediaQuery from 'react-responsive';
+
 
 
 export default class About extends Component {
@@ -9,7 +12,13 @@ export default class About extends Component {
         return (
             <div>
                 <div className='about-hero'>
-                <NavBar />
+                    <MediaQuery query="(min-width: 850.1px)">
+                        <NavBar />
+                    </MediaQuery>
+                    
+                    <MediaQuery query="(max-width: 850px)">
+                        <MobileNav />
+                    </MediaQuery>
                 <iframe title='vid' src="https://www.youtube.com/embed/0LZsUDYHuec?rel=0&showinfo=0&autoplay=1&loop=1&controls=0&autohide=1" frameBorder="0" allowFullScreen></iframe>
                     <div className='about-us'>
                         <h1>TLC ROCK</h1>

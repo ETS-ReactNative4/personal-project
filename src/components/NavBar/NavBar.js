@@ -1,9 +1,25 @@
 import React, { Component } from 'react';
 import './NavBar.css';
 import { Link } from 'react-router-dom';
+import AppBar from 'material-ui/AppBar';
+import Drawer from 'material-ui/Drawer';
+import MenuItem from 'material-ui/MenuItem';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+
 // import logoma from './logoma.png';
 
 export default class NavBar extends Component{
+    constructor(){
+        super();
+        this.state= {
+            open: false
+        }
+    }
+handleToggle = () => this.setState({ open: !this.state.open });
+    
+handleClose = () => this.setState({ open: false });
+
+
     render(){
         return(
             <div>
@@ -16,6 +32,7 @@ export default class NavBar extends Component{
                     <Link style={{textDecoration: 'none', color: 'white'}} to='/contactUs'><div className='head'><h3>CONTACT US</h3></div></Link>                 
                 </div>
             </div>
+            
         )
     }
 }

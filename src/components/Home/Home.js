@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import './Home.css';
 import NavBar from '../NavBar/NavBar';
+import MobileNav from '../MobileNav/MobileNav';
 import HomeContent from './HomeContent';
+import MediaQuery from 'react-responsive';
+
 // import axios from 'axios';
 
 export default class Home extends Component {
@@ -18,7 +21,14 @@ export default class Home extends Component {
         return (
             <div className='header'>
                 <div className='hero-img'>
-                    <NavBar />
+                    <MediaQuery query="(min-width: 850.1px)">
+                        <NavBar />
+                    </MediaQuery>
+                    
+                    <MediaQuery query="(max-width: 850px)">
+                        <MobileNav />
+                    </MediaQuery>
+
                         <div className='heroHome'>
                             <h1>TLC</h1>
                             <h3>The Terry Larsen family of companies are constantly working hard to try and improve<br />

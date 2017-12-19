@@ -4,6 +4,8 @@ import './Projects.css';
 import { getProjects } from '../..//ducks/reducer';
 import { connect } from 'react-redux';
 import axios from 'axios';
+import MobileNav from '../MobileNav/MobileNav';
+import MediaQuery from 'react-responsive';
 import swal from 'sweetalert';
 // import ScrollAnimation from 'react-animate-on-scroll';
 
@@ -79,7 +81,13 @@ class Projects extends Component {
         return (
             <div className='project-parent'>
                 <div className='heroProjects'>
-                    <NavBar />
+                <MediaQuery query="(min-width: 850.1px)">
+                        <NavBar />
+                    </MediaQuery>
+                    
+                    <MediaQuery query="(max-width: 850px)">
+                        <MobileNav />
+                    </MediaQuery>
                     <div className='Mission'>
                         <h1>Our Mission</h1>
                         <h3>Our goal is to provide error-free services that are second to none in our industry;<br />

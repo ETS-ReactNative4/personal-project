@@ -21,7 +21,7 @@ handleClose = () => this.setState({ open: false });
         return(
             <div>
                 <div className='NavBar'>
-                <a className='logo-name'href="tlcrockproducts.win"><h1 className='TLC'>TLC Crushing</h1></a>
+                    <Link style={{textDecoration: 'none', color: '#D93804'}}to='/'><h1 className='TLC'>TLC Crushing</h1></Link>
                     <Link style={{textDecoration: 'none', color: 'white'}}to='/'><div className='head'><h3>HOME</h3></div></Link>
                     <Link style={{textDecoration: 'none', color: 'white'}} to='/projects'><div className='head'><h3>PROJECTS</h3></div></Link>
                     {/* <Link to='/'><div className='logo'>LOGO</div></Link> */}

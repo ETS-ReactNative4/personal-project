@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
 import './NavBar.css';
 import { Link } from 'react-router-dom';
-import AppBar from 'material-ui/AppBar';
-import Drawer from 'material-ui/Drawer';
-import MenuItem from 'material-ui/MenuItem';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+// import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 // import logoma from './logoma.png';
 
@@ -24,7 +21,7 @@ handleClose = () => this.setState({ open: false });
         return(
             <div>
                 <div className='NavBar'>
-                <a className='logo-name'href=":3000/#/"><h1 className='TLC'>TLC Crushing</h1></a>
+                <a className='logo-name'href="tlcrockproducts.win"><h1 className='TLC'>TLC Crushing</h1></a>
                     <Link style={{textDecoration: 'none', color: 'white'}}to='/'><div className='head'><h3>HOME</h3></div></Link>
                     <Link style={{textDecoration: 'none', color: 'white'}} to='/projects'><div className='head'><h3>PROJECTS</h3></div></Link>
                     {/* <Link to='/'><div className='logo'>LOGO</div></Link> */}

@@ -68,11 +68,7 @@ class NavBar extends Component {
             <a
               className="m-0"
               style={{ textDecoration: "none", color: "white" }}
-              href={
-                this.props.user
-                  ? "/auth/logout"
-                  : "http://localhost:3013/auth/callback"
-              }
+              href={this.props.user ? "/auth/logout" : "/auth/callback"}
             >
               {this.props.user ? "Logout" : "Log In"}
             </a>

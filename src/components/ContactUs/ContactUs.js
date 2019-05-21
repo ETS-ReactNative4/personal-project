@@ -19,7 +19,7 @@ export default class ContactUs extends Component {
   mailerInfo(e) {
     e.preventDefault();
     axios
-      .post("http://localhost:3000/contact", {
+      .post("/contact", {
         to: "alex.ells21@gmail.com",
         from: this.state.from,
         subject: this.state.subject,

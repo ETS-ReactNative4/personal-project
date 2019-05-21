@@ -5,58 +5,64 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 90vh; }
+  /* height: 90vh; */ }
 
 .contact-hero {
-  background: url("contact1.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100vh; }
+  /* background: url("contact1.jpg"); */
+  /* background-repeat: no-repeat; */
+  /* background-size: cover; */
+  background: #e9ecef;
+  /* height: 100vh; */ }
 
 .contact-header {
-  font-family: 'Catamaran', sans-serif; }
+  font-family: "Catamaran", sans-serif; }
 
 .contact-input {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: #DADADA;
+  background: #dadada;
   width: 350px;
   padding-bottom: 15px;
-  animation-duration: 1.5s;
+  /* animation-duration: 1.5s; */
   /* the duration of the animation */
-  animation-timing-function: ease-out;
+  /* animation-timing-function: ease-out; */
   /* how the animation will behave */
-  animation-delay: 0s;
+  /* animation-delay: 0s; */
   /* how long to delay the animation from starting */
-  animation-iteration-count: 1;
+  /* animation-iteration-count: 1; */
   /* how many times the animation will play */
-  animation-name: slideInFromLeft; }
+  /* animation-name: slideInFromLeft; */ }
 
-@keyframes fadein {
+/* @keyframes fadein {
   from {
-    opacity: 0; }
+    opacity: 0;
+  }
   to {
-    opacity: 1; } }
+    opacity: 1;
+  }
+}
 
 @keyframes slideInFromLeft {
   0% {
-    transform: translateY(100%); }
+    transform: translateY(100%);
+  }
   100% {
-    transform: translateY(0); } }
-
+    transform: translateY(0);
+  }
+} */
 .contact-input h1 {
-  font-family: 'Catamaran', sans-serif;
+  font-family: "Catamaran", sans-serif;
   text-transform: uppercase;
   font-size: 40px; }
 
 .contact-input h2 {
-  font-family: 'Catamaran', sans-serif;
+  font-family: "Catamaran", sans-serif;
   text-transform: uppercase;
   font-size: 35px; }
 
 p {
-  font-family: 'Catamaran', sans-serif; }
+  font-family: "Catamaran", sans-serif; }
 
 .mytext {
   /* width: 400px;

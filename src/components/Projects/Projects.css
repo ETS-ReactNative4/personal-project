@@ -2,11 +2,11 @@
 @import url("https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:800");
 /* font-family: 'Catamaran', sans-serif; */
 .project-parent {
-  background: #DADADA;
+  background: #e9ecef;
   width: 100%; }
 
 .Mission {
-  font-family: 'Catamaran', sans-serif;
+  font-family: "Catamaran", sans-serif;
   margin-left: 60px;
   text-transform: uppercase;
   margin-top: 50px;
@@ -15,7 +15,7 @@
 .headerProjects {
   color: black;
   /* font-family: 'PT Sans Narrow', sans-serif; */
-  font-family: 'Catamaran', sans-serif;
+  font-family: "Catamaran", sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -25,11 +25,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: 'Catamaran', sans-serif;
+  font-family: "Catamaran", sans-serif;
   width: 100vw; }
 
 .project-header {
-  font-family: 'Alegreya Sans SC', sans-serif;
+  font-family: "Alegreya Sans SC", sans-serif;
   margin-left: 200px;
   margin-top: 100px;
   margin-bottom: 40px; }
@@ -55,7 +55,7 @@ h3 {
   width: 50px; }
 
 .project1 {
-  font-family: 'Catamaran', sans-serif;
+  font-family: "Catamaran", sans-serif;
   width: 500px;
   height: 400px; }
 

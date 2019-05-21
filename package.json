@@ -4,6 +4,7 @@
   "proxy": "http://localhost:3013",
   "private": true,
   "dependencies": {
+    "3d-react-carousal": "^2.0.1",
     "axios": "^0.17.0",
     "body-parser": "^1.18.2",
     "cors": "^2.8.4",

@@ -2,36 +2,38 @@
 @import url("https://fonts.googleapis.com/css?family=Catamaran:200");
 @import url("https://fonts.googleapis.com/css?family=New+Rocker");
 .header {
-  background: #DADADA; }
+  background: #e9ecef; }
+
+.heroHeader {
+  /* position: absolute; */
+  /* top: 20px; */
+  /* height: 400px; */
+  color: black; }
 
 .heroHome {
-  color: white;
   /* font-family: 'PT Sans Narrow', sans-serif; */
-  font-family: 'Catamaran', sans-serif;
+  font-family: "Catamaran", sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
   font-size: 25px;
-  margin-top: 120px; }
+  color: black; }
 
 .heroHome h1 {
   font-size: 70px;
-  color: #D93804; }
+  color: #d93804; }
 
 .heroHome {
   animation: fadein 2s; }
 
 .hero-img {
-  background: url("hero1.jpg");
-  background-repeat: no-repeat;
+  background: url("TLCHeader.jpeg") center no-repeat;
   background-size: cover;
-  height: 900px; }
+  height: 500px;
+  /* opacity: 0.4; */ }
 
 .sub-header {
-  font-family: 'Catamaran', sans-serif;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  font-family: "Catamaran", sans-serif;
   margin-top: 10px;
   margin-bottom: 20px;
   font-size: 25px;
@@ -39,8 +41,8 @@
   margin-bottom: 120px; }
 
 .sub-header h2 {
-  font-family: 'Unlock', cursive;
-  color: #D93804;
+  font-family: "Unlock", cursive;
+  color: #d93804;
   font-size: 50px;
   animation: fadein 2s; }
 
@@ -68,8 +70,6 @@
   .heroHome {
     font-size: 25px;
     margin-top: 60px; }
-  .hero-img {
-    height: 550px; }
   .sub-header {
     font-size: 25px;
     margin-top: 120px;
@@ -102,6 +102,12 @@
   .img1 {
     width: 150px;
     height: 100px; } }
+
+@media (max-width: 520px) {
+  .sub-header {
+    width: 100% !important; }
+  #TLCGuarantees {
+    width: 100% !important; } }
 
 @media (max-width: 464px) {
   .img1 {

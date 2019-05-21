@@ -1,132 +1,101 @@
-@import url('https://fonts.googleapis.com/css?family=Catamaran:200');
-@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:800');
-
-
+@import url("https://fonts.googleapis.com/css?family=Catamaran:200");
+@import url("https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:800");
 /* font-family: 'Catamaran', sans-serif; */
-
-
-.heroProjects{
-    // background: url('hero2.jpg');
-    // background-repeat: no-repeat;
-    // background-size: cover;
-    // height: 300px;
+.project-parent {
+  background: #e9ecef;
+  width: 100%;
 }
 
-.project-parent{
-    background: #DADADA;
-    width: 100%;
+.Mission {
+  font-family: "Catamaran", sans-serif;
+  margin-left: 60px;
+  text-transform: uppercase;
+  margin-top: 50px;
+  animation: fadein 2s;
 }
 
-.Mission{
-    font-family: 'Catamaran', sans-serif;
-    margin-left: 60px;
-    text-transform: uppercase;
-    margin-top: 50px;
-    animation: fadein 2s;
-    
-    
+.headerProjects {
+  color: black;
+  /* font-family: 'PT Sans Narrow', sans-serif; */
+  font-family: "Catamaran", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 80px;
 }
 
-.headerProjects{
-    color:black;
-    /* font-family: 'PT Sans Narrow', sans-serif; */
-    font-family: 'Catamaran', sans-serif;
-    // font-family: 'Alegreya Sans SC', sans-serif;    
-    display: flex;
-    flex-direction: column; 
-    align-items: center; 
-    margin-top: 80px;
+.project {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Catamaran", sans-serif;
+  width: 100vw;
 }
 
-
-.project{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    // justify-content: space-around;
-    font-family: 'Catamaran', sans-serif;
-    width: 100vw;
-    // animation: fadein 2s;
+.project-header {
+  font-family: "Alegreya Sans SC", sans-serif;
+  margin-left: 200px;
+  margin-top: 100px;
+  margin-bottom: 40px;
 }
 
-.project-header{
-    // font-family: 'Catamaran', sans-serif;
-    font-family: 'Alegreya Sans SC', sans-serif;
-    
-    margin-left: 200px;
-    margin-top: 100px;
-    margin-bottom: 40px;
-    // text-transform: uppercase;
+h3 {
+  margin-top: 20px;
 }
 
-// img{
-    //     width: 400px;
-    //     height: 300px;
-    // }
-    
-    h3{
-        margin-top: 20px;
-    }
-    
-    .project-input{
-        display: flex;
-        flex-direction: column;
-        padding-left: 50px;
-    }
-    
-    .project-input input{
-        width: 600px;
-        // height: 150px;
-        padding: 12px 20px;
-        box-sizing: border-box;
-        border: 2px solid #ccc;
-        border-radius: 4px;
-        background-color: #f8f8f8;
-        resize: none;
-    }
-    
-    .project-input button{
-        width: 50px;
-    }
-
-    .project1{
-        // height: 100%;
-        // width: 30%;
-        font-family: 'Catamaran', sans-serif;
-        // margin-left: 200px;
-        width: 500px;
-        height: 400px;
-    }
-
-    .editingBtn{
-        margin-left: 30px;
-    }
-
-    input{
-        width: 20%;
-        // height: 150px;
-        padding: 12px 20px;
-        box-sizing: border-box;
-        border: 2px solid #ccc;
-        border-radius: 4px;
-        background-color: #f8f8f8;
-        resize: none;
-    }
-    
-    @media(max-width: 1100px){
-        .project1{
-            width: 400px;
-            height: 300px;
-        }
-    }
-    @media(max-width:675px){
-    .project-input input{
-        width: 300px;
-    }
-
-    .project1{
-        width: 350px;
-        height: 250px;
-    }
+.project-input {
+  display: flex;
+  flex-direction: column;
+  padding-left: 50px;
 }
 
+.project-input input {
+  width: 600px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  resize: none;
+}
+
+.project-input button {
+  width: 50px;
+}
+
+.project1 {
+  font-family: "Catamaran", sans-serif;
+  width: 500px;
+  height: 400px;
+}
+
+.editingBtn {
+  margin-left: 30px;
+}
+
+input {
+  width: 20%;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  resize: none;
+}
+
+@media (max-width: 1100px) {
+  .project1 {
+    width: 400px;
+    height: 300px;
+  }
+}
+
+@media (max-width: 675px) {
+  .project-input input {
+    width: 300px;
+  }
+  .project1 {
+    width: 350px;
+    height: 250px;
+  }
+}

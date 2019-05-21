@@ -1,81 +1,74 @@
-@import url('https://fonts.googleapis.com/css?family=Catamaran:200');
-
-
-
-.about-hero{
-    // background: url('about.jpg');
-    // background-repeat: no-repeat;
-    background-size: cover;
-    height: 60vh;
+@import url("https://fonts.googleapis.com/css?family=Catamaran:200");
+.about-hero {
+  background-size: cover;
+  height: 60vh;
 }
 
-.about-us{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: column;
-    background: #DDDDDD;
-    height: 500px;
-    width: 100vw;
-    // margin-left: 228px;
-    margin-top: -4px;
-    font-family: 'Catamaran', sans-serif;
-    text-transform: uppercase;
-    // padding-top: 20px;
-}
-.about-us h1{
-    color: #D93804;
-    
+.about-us {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  background: #dddddd;
+  height: 500px;
+  width: 100vw;
+  margin-top: -4px;
+  font-family: "Catamaran", sans-serif;
+  text-transform: uppercase;
 }
 
-.about-us h3{
-    width: 1000px;
+.about-us h1 {
+  color: #d93804;
 }
 
-iframe{
-    height: 70vh;
-    width: 100vw;
+.about-us h3 {
+  width: 1000px;
 }
 
-@media(max-width: 1100px){
-    .about-us h3{
-        width: 800px;
-    }
-}
-@media(max-width: 875px){
-    .about-us h3{
-        width: 600px;
-    }
+iframe {
+  height: 70vh;
+  width: 100vw;
 }
 
-@media(max-width: 675px){
-    .about-us{
-        height: 600px;
-    }
-}
-@media(max-width: 600px){
-    .about-us h3{
-        width: 400px;
-    }
-
-    .about-us{
-        height: 900px;
-    }
+@media (max-width: 1100px) {
+  .about-us h3 {
+    width: 800px;
+  }
 }
 
-
-@media(max-width: 450px){
-    .about-us{
-        height: 900px;
-    }
-    .about-us h3{
-        margin-top: -127px;
-    }
+@media (max-width: 875px) {
+  .about-us h3 {
+    width: 600px;
+  }
 }
 
-@media(max-width: 400px){
-    .about-us h3{
-        width: 300px;
-        font-size: 15px;
-    }
+@media (max-width: 675px) {
+  .about-us {
+    height: 600px;
+  }
+}
+
+@media (max-width: 600px) {
+  .about-us h3 {
+    width: 400px;
+  }
+  .about-us {
+    height: 900px;
+  }
+}
+
+@media (max-width: 450px) {
+  .about-us {
+    height: 900px;
+  }
+  .about-us h3 {
+    margin-top: -127px;
+  }
+}
+
+@media (max-width: 400px) {
+  .about-us h3 {
+    width: 300px;
+    font-size: 15px;
+  }
 }

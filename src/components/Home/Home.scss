@@ -1,161 +1,148 @@
-@import url('https://fonts.googleapis.com/css?family=PT+Sans+Narrow');
-@import url('https://fonts.googleapis.com/css?family=Catamaran:200');
-@import url('https://fonts.googleapis.com/css?family=New+Rocker');
-
-
-.header{
-    background: #DADADA
+@import url("https://fonts.googleapis.com/css?family=PT+Sans+Narrow");
+@import url("https://fonts.googleapis.com/css?family=Catamaran:200");
+@import url("https://fonts.googleapis.com/css?family=New+Rocker");
+.header {
+  background: #e9ecef;
 }
-.heroHome{
-    color: white;
-    /* font-family: 'PT Sans Narrow', sans-serif; */
-    font-family: 'Catamaran', sans-serif;
-    display: flex;
-    flex-direction: column; 
-    align-items: center; 
-    // margin-top: 60px;
+
+.heroHeader {
+  /* position: absolute; */
+  /* top: 20px; */
+  /* height: 400px; */
+  color: black;
+}
+
+.heroHome {
+  /* font-family: 'PT Sans Narrow', sans-serif; */
+  font-family: "Catamaran", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 25px;
+  color: black;
+}
+
+.heroHome h1 {
+  font-size: 70px;
+  color: #d93804;
+}
+
+.heroHome {
+  animation: fadein 2s;
+}
+
+.hero-img {
+  background: url("TLCHeader.jpeg") center no-repeat;
+  background-size: cover;
+  height: 500px;
+  /* opacity: 0.4; */
+}
+
+.sub-header {
+  font-family: "Catamaran", sans-serif;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-size: 25px;
+  margin-top: 120px;
+  margin-bottom: 120px;
+}
+
+.sub-header h2 {
+  font-family: "Unlock", cursive;
+  color: #d93804;
+  font-size: 50px;
+  animation: fadein 2s;
+}
+
+.HomeImage {
+  display: flex;
+  /* background: #6F6F6F; */
+  justify-content: space-around;
+  /* margin-bottom: 60px; */
+  margin-top: -20px;
+}
+
+.img1 {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  width: 400px;
+  height: 300px;
+  margin-bottom: 60px;
+}
+
+@media (max-width: 1300px) {
+  .img1 {
+    width: 350px;
+    height: 250px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .heroHome {
     font-size: 25px;
-    margin-top: 120px;
-
-}
-
-.heroHome h1{
-    font-size: 70px;
-    color: #D93804;
-    // animation: fadein 2s;
-    
-}
-
-.heroHome{
-    animation: fadein 2s;
-}
-
-.hero-img{
-    background: url('hero1.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    // height: 550px;
-    height: 900px;
-}
-
-.sub-header{
-    // background: #F8F8F8;
-    font-family: 'Catamaran', sans-serif; 
-    display: flex;
-    flex-direction: column; 
-    align-items: center;
-    margin-top: 10px;
-    margin-bottom: 20px; 
+    margin-top: 60px;
+  }
+  .sub-header {
     font-size: 25px;
     margin-top: 120px;
     margin-bottom: 120px;
-}
-.sub-header h2{
-    font-family: 'Unlock', cursive;
-    // font-family: 'New Rocker', cursive;
-    color: #D93804;
-    font-size: 50px;
-    animation: fadein 2s;
-    
+  }
 }
 
-.HomeImage{
-    display: flex;
-    // align-items: center;
-    /* background: #6F6F6F; */
-    justify-content: space-around;
-    /* margin-bottom: 60px; */
-    margin-top: -20px;
-}
-.img1{
-    display: flex;
-    justify-content: space-around;
-    flex-direction: column;
-    // width: 100%;
-    // height: 100%;
-    width: 400px;
-    height: 300px;
-    // border-bottom: 50px solid gray;
-    margin-bottom: 60px;
-    // background: red;
-}
-// .img1 img{
-//     width: 400px;
-//     height: 300px;
-// }
-
-
-@media(max-width: 1300px){
-    .img1{
-        width: 350px;
-        height: 250px;
-    }
+@media (max-width: 1075px) {
+  .img1 {
+    width: 300px;
+    height: 200px;
+  }
+  .heroHome h3 {
+    font-size: 20px;
+  }
+  .sub-header h4 {
+    font-size: 20px;
+  }
 }
 
-@media(max-width: 1100px){
-    .heroHome{
-        font-size: 25px;
-        margin-top: 60px;
-    }
-
-    .hero-img{
-        height: 550px;
-    }
-
-    .sub-header{
-        font-size: 25px;
-        margin-top: 120px;
-        margin-bottom: 120px;
-    }
-
-
+@media (max-width: 900px) {
+  .img1 {
+    width: 250px;
+    height: 200px;
+  }
 }
 
-@media(max-width: 1075px){
-    .img1{
-        width: 300px;
-        height: 200px;
-    }
-
-    .heroHome h3{
-        font-size: 20px;
-    }
-    .sub-header h4{
-        font-size: 20px;
-    }
+@media (max-width: 750px) {
+  .img1 {
+    width: 200px;
+    height: 150px;
+  }
 }
 
-@media(max-width: 900px){
-    .img1{
-        width: 250px;
-        height: 200px;
-    }
+@media (max-width: 700) {
+  .heroHome h3 {
+    font-size: 15px;
+  }
 }
 
-@media(max-width: 750px){
-    .img1{
-        width: 200px;
-        height: 150px;
-    }
-}
-@media(max-width: 700){
-    .heroHome h3{
-        font-size: 15px;
-    }
+@media (max-width: 600px) {
+  .img1 {
+    width: 150px;
+    height: 100px;
+  }
 }
 
-@media(max-width: 600px){
-    .img1{
-        width: 150px;
-        height: 100px;
-        // margin-bottom: 150px;
-    }
-    
+@media (max-width: 520px) {
+  .sub-header {
+    width: 100% !important;
+  }
+
+  #TLCGuarantees {
+    width: 100% !important;
+  }
 }
 
-@media(max-width: 464px){
-    .img1{
-        width: 120px;
-        height: 90px;
-    }
+@media (max-width: 464px) {
+  .img1 {
+    width: 120px;
+    height: 90px;
+  }
 }

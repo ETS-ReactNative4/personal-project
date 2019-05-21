@@ -8,15 +8,15 @@
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
-  background: #DDDDDD;
+  background: #dddddd;
   height: 500px;
   width: 100vw;
   margin-top: -4px;
-  font-family: 'Catamaran', sans-serif;
+  font-family: "Catamaran", sans-serif;
   text-transform: uppercase; }
 
 .about-us h1 {
-  color: #D93804; }
+  color: #d93804; }
 
 .about-us h3 {
   width: 1000px; }

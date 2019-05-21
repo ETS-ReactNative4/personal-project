@@ -1,115 +1,108 @@
-@import url('https://fonts.googleapis.com/css?family=Catamaran:200');
-@import url('https://fonts.googleapis.com/css?family=Unlock');
-
-
+@import url("https://fonts.googleapis.com/css?family=Catamaran:200");
+@import url("https://fonts.googleapis.com/css?family=Unlock");
 /* font-family: 'Catamaran', sans-serif; */
-.flexin{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    // background: red;
-    height: 90vh;
-
-}
-.contact-hero{
-    background: url('contact1.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
+.flexin {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /* height: 90vh; */
 }
 
-.contact-header{
-    font-family: 'Catamaran', sans-serif;
-    // margin-left: 100px;
-    // margin-top: 60px;    
+.contact-hero {
+  /* background: url("contact1.jpg"); */
+  /* background-repeat: no-repeat; */
+  /* background-size: cover; */
+  background: #e9ecef;
+  /* height: 100vh; */
 }
 
-.contact-input{
-    display: flex;
-    flex-direction: column;    
-    align-items: center;
-    // justify-content: space-around;
-    background: #DADADA;
-    width: 350px;
-    padding-bottom: 15px;
-    // animation: fadein 2s;
-    animation-duration: 1.5s; /* the duration of the animation */
-    animation-timing-function: ease-out; /* how the animation will behave */
-    animation-delay: 0s; /* how long to delay the animation from starting */
-    animation-iteration-count: 1; /* how many times the animation will play */
-    animation-name: slideInFromLeft;
+.contact-header {
+  font-family: "Catamaran", sans-serif;
 }
 
-@keyframes fadein {
-    from { opacity: 0}
-    to { opacity: 1 }
+.contact-input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #dadada;
+  width: 350px;
+  padding-bottom: 15px;
+  /* animation-duration: 1.5s; */
+  /* the duration of the animation */
+  /* animation-timing-function: ease-out; */
+  /* how the animation will behave */
+  /* animation-delay: 0s; */
+  /* how long to delay the animation from starting */
+  /* animation-iteration-count: 1; */
+  /* how many times the animation will play */
+  /* animation-name: slideInFromLeft; */
+}
+
+/* @keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes slideInFromLeft {
-    0%{
-        transform: translateY(100%)
-    }
-    100%{
-        transform: translateY(0);
-    }
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+} */
+
+.contact-input h1 {
+  font-family: "Catamaran", sans-serif;
+  text-transform: uppercase;
+  font-size: 40px;
 }
 
-.contact-input h1{
-    font-family: 'Catamaran', sans-serif;
-    text-transform: uppercase;
-    font-size: 40px;    
-}
-.contact-input h2{
-    font-family: 'Catamaran', sans-serif;
-    text-transform: uppercase;
-    font-size: 35px; 
-    // width: 500px;
+.contact-input h2 {
+  font-family: "Catamaran", sans-serif;
+  text-transform: uppercase;
+  font-size: 35px;
 }
 
-p{
-    font-family: 'Catamaran', sans-serif;
-    
+p {
+  font-family: "Catamaran", sans-serif;
 }
 
-.fbLink{
-    // height: 20px;
-    // width: 20px;
-}
-
-.mytext{
-    /* width: 400px;
+.mytext {
+  /* width: 400px;
     height: 200px;
     resize: none;
     text-align: start; */
 }
 
-.mailerstuff{
-    display: flex;
-    flex-direction: column;
-    width: 200px;
+.mailerstuff {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
 }
 
-.mailerstuff input{
-    margin-top: 20px;
-    width: 100%;
-    // height: 150px;
-    padding: 12px 20px;
-    box-sizing: border-box;
-    border: 2px solid #ccc;
-    border-radius: 4px;
-    background-color: #f8f8f8;
-    resize: none;
+.mailerstuff input {
+  margin-top: 20px;
+  width: 100%;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  resize: none;
 }
 
-.icons{
-    display: flex;
-    justify-content: space-around;
-}
-.icons a{
-    margin-left: 10px;
-    margin-top: 10px;
-    // color: black;
-    color: black;
-    
+.icons {
+  display: flex;
+  justify-content: space-around;
 }
 
+.icons a {
+  margin-left: 10px;
+  margin-top: 10px;
+  color: black;
+}
